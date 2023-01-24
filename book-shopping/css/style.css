@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+*{
+
+    font-family: "Poppins", sans-serif ;
+    font-weight: 700;
+
+}
+.box{
+    width: 200px;
+    height: 200px;
+}
