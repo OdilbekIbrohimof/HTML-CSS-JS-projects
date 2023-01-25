@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./library/css/swiper.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="shortcut icon" href="./images/black-vertical.png" type="image/x-icon">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cssbattle.robocode.uz/">
+    <meta property="og:title" content="CSS hakaton - Frontend hakaton">
+    <meta property="og:description"
+        content="Vodiydagi dasturlashga qiziquvchi yoshlar uchun Robocode IT Academy va pylbog CSS hakaton uyishtiradi. O'z CSS bilimlaringizni sinab ko'ring va smartfon yutib oling!">
+    <meta property="og:image" content="https://robocode.uz/static/images/black-vertical.png">
+
+
+    <title>CSS Hackathonga tayyorisiz</title>
+</head>
+
+<body>
+    <header>
+        <div class="section-wrapp">
+            <div class="container">
+                <ul class="header_navbar">
+                    <li class="header_navbar_item reached"><a href="index.html">Bosh Sahifa</a></li>
+                    <li class="header_navbar_item reached"><a href="#about">Hakaton haqida</a></li>
+                    <li class="header_navbar_item"><a href="#timeline">Taymlayn</a></li>
+                    <li class="header_navbar_item"><a href="#faq">FAQ</a></li>
+                    <li class="header_navbar_item"><a href="#partners">Hamkorlar</a></li>
+                    <li class="header_navbar_item"><a href="tel: +998 99 899 90 05">Bog’lanish</a></li>
+                </ul>
+                <div class="burger_wrapper">
+                    <div class="header_burger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_line"></div>
+    </header>
+    <main>
+        <div class="swiper-slide">
+            <div class="section_hero">
+                <div class="section-wrapp">
+                    <div class="container">
+                        <ul class="section_hero_list">
+                            <li class="section_hero_item">
+                                <h1 class="section_hero_heading hero_text">
+                                    Battlega
+                                    <br>
+                                    Tayyormisiz?
+                                </h1>
+                                <a href="#register" class="section_hero_link hero_link">
+                                    <button class="section_hero_btn">Ishtirok etish</button>
+                                </a>
+                            </li>
+                            <li class="section_hero_item">
+                                <img src="./images/section_hero_img_three.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section_partners" id="register">
+            <div class="section-wrapp">
+                <h1 class="heading">
+                    <span class="number_span">5</span> Ro'yhatdan o'tish
+                </h1>
+                <div id="form_container">
+
+                    <div class="form">
+                        <form action="" class="card card-accent" method="POST">
+                            <p>
+                                <label for="name">Ism Familya</label>
+                                <input type="text" id="name" placeholder="Ism (to'liq holda)*">
+                            </p>
+                            <p>
+                                <label for="date">Tug'ilgan yili</label>
+                                <input type="date" name="date" id="date">
+                            </p>
+                            <p>
+                                <label for="phone">Telefon</label>
+                                <input type="number" name="date" id="phone" placeholder="+998-">
+                            </p>
+                            <p>
+                                <label for="addres">Yashash manzili</label>
+                                <input type="text" name="date" id="addres" placeholder="Shahar , tuman ">
+                            </p>
+
+                            <p>
+                                <button class="send_btn">Yuborish</button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="divider_block"></div>
+                    <div class="images_partners">
+                        <img src="./images/section_partners_robocode.svg" alt="">
+                        <img src="./images/section_hero_img.png" width="300" alt="">
+                        <img src="./images/section_partners_pyblog.svg" alt="">
+                        <img src="./images/section_partners_texnopark.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
