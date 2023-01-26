@@ -1,0 +1,10 @@
+ <ul class="social-items reset-list">
+                            <div class="social-item"><a href="https://www.youtube.com/channel/UCVPst_iSyaVYpuOP4ogRhlw"
+                                    target="_blank" class="fa-brands fa-youtube"></a></div>
+                            <div class="social-item"><a href="https://telegram.me/kunuzofficial" target="_blank"><i class="fa-brands fa-telegram"></i></a></div>
+                            <div class="social-item"><a href="https://www.facebook.com/kunuznews/" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+                            <div class="social-item"><a href="https://twitter.com/KunUzNews" target="_blank"><i class="fa-brands fa-twitter"></i>></a></div>
+                            <div class="social-item"><a href="https://www.instagram.com/kun.uz" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                            <div class="social-item"><a href="/news/rss" target="_blank"><img
+                                        src="/assets/4da8d774/img/social-rss.svg"></a></div>
+</ul>
