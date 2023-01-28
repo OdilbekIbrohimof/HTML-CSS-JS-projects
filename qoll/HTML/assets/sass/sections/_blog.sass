@@ -1,0 +1,246 @@
+/*******************************************************/
+/******************* 15. Blog Section ******************/
+/*******************************************************/
+.blog-item
+    overflow: hidden
+    background: white
+    border-radius: 7px
+    margin-bottom: 30px
+    box-shadow: 10px 0 60px rgba(119, 122, 242, 0.1)
+    .image
+        img
+            width: 100%
+    .blog-content
+        position: relative
+        padding: 35px 35px 0
+        +xs-d
+            +gapLR(padding, 20px)
+        .details-btn
+            +size(55px)
+            top: -28px
+            right: 30px
+            color: white
+            line-height: 55px
+            text-align: center
+            border-radius: 5px
+            position: absolute
+            background: $primary-color
+            &:hover
+                background: $secondary-color
+        h4
+            +sm-d
+                font-size: 20px
+    .blog-footer
+        margin-top: 25px
+        +gapTB(padding, 12px)
+        +flexcenter(space-between)
+        border-top: 1px solid $border-color
+        li
+            +flexcenter(start)
+            i
+                margin-right: 10px
+                color: $primary-color
+                +xs-d
+                    display: none
+            a
+                font-weight: 600
+            .dot
+                +size(7px)
+                content: ''
+                border-radius: 50%
+                background: #c3c6cd
+                
+/* Blog Details */
+.single-blog-post
+    .post-thumbnail
+        img
+            width: 100%
+    .post-categories
+        left: 0
+        bottom: 100%
+        display: flex
+        position: absolute
+        a
+            color: white
+            line-height: 1
+            font-size: 18px
+            font-weight: 700
+            padding: 12px 30px
+            background: $primary-color
+            &:hover
+                background: $secondary-color
+    .post-content
+        position: relative
+        padding: 40px 50px
+        box-shadow: 0px 20px 100px 0px rgba(58, 65, 111, 0.1)
+        +mo-d
+            +gapLR(padding, 25px)
+        .post-meta
+            display: flex
+            flex-wrap: wrap
+            font-weight: 600
+            margin-bottom: 15px
+            li
+                &:not(:last-child)
+                    margin-right: 20px
+                i
+                    margin-right: 5px
+        .post-title
+            margin-bottom: 25px
+            +ms-d
+                font-size: 25px
+            +xs-d
+                font-size: 20px
+        blockquote
+            margin: 40px 0
+            font-size: 24px
+            font-weight: 700
+            line-height: 1.5
+            padding: 40px 50px
+            color: $heading-color
+            background: $light-color
+            font-family: $heading-font
+            border-left: 4px solid $primary-color
+            +sm-d
+                font-size: 20px
+                padding: 30px 25px
+            +xs-d
+                font-size: 18px
+            p
+                margin-bottom: 10px
+            cite
+                display: flex
+                font-size: 18px
+                font-weight: 500
+                align-items: center
+                +xs-d
+                    font-size: 16px
+                &:before
+                    content: ''
+                    height: 2px
+                    width: 50px
+                    margin-right: 15px
+                    background: $secondary-color
+                    +sm-d
+                        width: 20px
+                        margin-right: 10px
+        .content-footer
+            margin-top: 40px
+            .title
+                font-size: 18px
+                font-weight: 700
+                margin-bottom: 0
+                margin-right: 20px
+                color: $heading-color
+                +xs-d
+                    font-size: 16px
+                    margin-right: 15px
+            .post-share,
+            .related-tags
+                display: flex
+                flex-wrap: wrap
+                margin-bottom: 20px
+                a
+                    line-height: 1
+                    font-size: 15px
+                    font-weight: 600
+                    padding: 8px 15px
+                    border-radius: 5px
+                    margin-right: 10px
+                    margin-bottom: 10px
+                    color: $heading-color
+                    display: inline-block
+                    background: $light-color
+                    &:hover
+                        color: white
+                        background: $primary-color
+        .post-author
+            display: flex
+            margin-top: 50px
+            padding: 30px 25px
+            align-items: center
+            background: $light-color
+            +ms-d
+                display: block
+            .author-photo
+                width: 160px
+                flex: 0 0 160px
+                margin-right: 25px
+                +ms-d
+                    margin-bottom: 15px
+                img
+                    border-radius: 50%
+            .author-content
+                h5, p
+                    margin-bottom: 10px
+            .share-links
+                display: flex
+                a
+                    margin-right: 15px
+                    
+        .post-nav
+            display: flex
+            justify-content: space-between
+            > div
+                width: 48%
+                display: flex
+                max-width: 275px
+                +ms-d
+                    display: block
+                .post-thumb
+                    flex: none
+                    max-width: 75px
+                    margin-right: 15px
+                    margin-bottom: 10px
+                .content
+                    h6
+                        margin-bottom: 0
+                        +sm-d
+                            font-size: 16px
+                    span
+                        font-size: 14px
+.comment-list
+    li
+        &:not(:last-child)
+            margin-bottom: 50px
+        .children
+            margin-top: 50px
+            margin-left: 50px
+            +xs-d
+                margin-left: 25px
+    .comment-body
+        display: flex
+        +sm-d
+            display: block
+        .author-thumb
+            flex: none
+            width: 100px
+            margin-right: 25px
+            +sm-d
+                margin-bottom: 15px
+            img
+                border-radius: 50%
+        .comment-content
+            .name
+                flex-wrap: wrap
+                margin-bottom: 5px
+                +flexcenter(space-between)
+                span
+                    margin: 10px 0
+                    font-size: 16px
+                    font-weight: 500
+            p
+                margin-bottom: 2px
+            .reply-link
+                display: flex
+                font-weight: 600
+                align-items: center
+                color: $heading-color
+                text-transform: uppercase
+                i
+                    margin-left: 5px
+                    
+.comment-form
+    input,
+    textarea
+        background: $light-color

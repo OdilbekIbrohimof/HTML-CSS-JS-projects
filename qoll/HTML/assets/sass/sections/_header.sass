@@ -1,0 +1,336 @@
+/*******************************************************/
+/******************* 06. Header style ******************/
+/*******************************************************/
+.main-header
+    position: fixed
+    left: 0px
+    top: 0px
+    z-index: 999
+    width: 100%
+    transition: all 500ms ease
+    .header-upper
+        z-index: 5
+        width: 100%
+        position: relative
+        +gapLR(padding, 55px)
+        transition: all 500ms ease
+        +lg-d
+            +gapLR(padding, 0)
+    .logo-outer
+        flex: none
+        +tb-d
+            display: none
+    .logo
+        z-index: 9
+        padding: 2px 0
+        position: relative
+    .nice-select
+        height: auto
+        border: none
+        line-height: 1
+        font-size: 18px
+        border-radius: 0
+        font-weight: 700
+        margin-left: 45px
+        padding-left: 40px
+        padding-right: 16px
+        border-left: 3px solid white
+        background-color: transparent
+        &:after
+            right: 0
+            +size(8px)
+            margin-top: -5px
+            border-color: $primary-color
+        .current
+            color: white
+        .list
+            top: 30px
+            left: auto
+    &.fixed-header
+        .header-upper
+            background: $heading-color
+            border-bottom: 1px solid $heading-color
+        .navbar-collapse > ul > li
+            +gapTB(padding, 25px)
+            +tb-d
+                +gapTB(padding, 0)
+    
+.nav-outer
+    +tb-d
+        width: 100%
+ 
+/** Header Main Menu **/
+.main-menu
+    +tb-d
+        width: 100%
+    .collapse
+        +tb-d
+            overflow: auto
+    .navbar-collapse
+        padding: 0px
+        > ul
+            display: flex
+            +tb-d
+                display: block
+                padding: 25px 0
+                background: #FFFFFF
+                > li:last-child
+                    border-bottom: 1px solid #f3f3f3
+            > li > a
+                color: white
+                +tb-d
+                    color: #1e266d
+        +tb-d
+            left: 0
+            width: 100%
+            padding: 0 15px
+            position: absolute
+        li
+            transition: 0.5s
+            padding: 33px 20px
+            +flexcenter(space-between)
+            +lg-d
+                padding: 30px 15px
+            +md-d
+                padding: 30px 10px
+            +tb-d
+                display: block
+                padding: 0 20px
+                border-top: 1px solid #f3f3f3
+            &.dropdown .dropdown-btn
+                cursor: pointer
+                font-size: 13px
+                margin-left: 8px
+                color: $primary-color
+                +tb-d
+                    position: absolute
+                    right: 10px
+                    top: 0
+                    width: 50px
+                    height: 43px
+                    border-left: 1px solid #f2f2f2
+                    text-align: center
+                    line-height: 43px
+            a
+                position: relative
+                display: block
+                font-size: 18px
+                opacity: 1
+                font-weight: 700
+                color: $heading-color
+                text-transform: capitalize
+                transition: all 500ms ease
+                +tb-d
+                    padding: 10px 10px
+                    line-height: 22px
+            &.current > a, &.current-menu-item > a
+                font-weight: 500
+            li
+                border-top: 1px solid #f3f3f3
+                a
+                    text-transform: capitalize
+            .megamenu
+                position: absolute
+                left: 0px
+                top: 100%
+                width: 100%
+                z-index: 100
+                display: none
+                padding: 20px 0
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +clearfix
+                +tb-d
+                    position: relative
+                    box-shadow: none
+                    width: 100%
+                    .container
+                        max-width: 100%
+                    .row
+                        margin: 0px
+                ul
+                    display: block
+                    position: relative
+                    top: 0
+                    width: 100%
+                    box-shadow: none
+            ul
+                position: absolute
+                left: inherit
+                top: 100%
+                min-width: 250px
+                z-index: 100
+                display: none
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +tb-d
+                    position: relative
+                    display: none
+                    width: 100%
+                    box-shadow: none
+                    +clearfix
+                    +xs-d
+                        min-width: auto
+                li
+                    width: 100%
+                    padding: 7px 20px
+                    +tb-d
+                        padding: 0 15px
+                    ul
+                        left: 100%
+                        top: 0%
+                        +tb-d
+                            left: auto
+
+    .navbar-header
+        display: none
+        +tb-d
+            +flexcenter(start)
+        .navbar-toggle
+            float: right
+            padding: 4px 0
+            cursor: pointer
+            background: transparent
+            .icon-bar
+                background: white
+                height: 2px
+                width: 30px
+                display: block
+                margin: 7px 0
+                
+.menu-btn-sidebar
+    .theme-btn
+        +md-d
+            display: none
+    
+/* Menu Sidebar */
+.menu-sidebar
+    display: flex
+    margin-left: 40px
+    +tb-d
+        margin-left: 0
+    button
+        width: 35px
+        cursor: pointer
+        flex-wrap: wrap
+        border-radius: 50%
+        +flexcenter(end)
+        background: transparent
+        .icon-bar
+            height: 3px
+            width: 30px
+            margin: 4px 0 4px auto
+            transition: 0.5s
+            background: white
+            &:nth-child(2)
+                width: 100%
+  
+/** hidden-sidebar *
+.hidden-bar
+    position: fixed
+    right: -350px
+    top: 0px
+    opacity: 0
+    width: 350px
+    height: 100%
+    z-index: 99999
+    overflow-y: auto
+    visibility: hidden
+    transition: all 0.5s ease
+    background-color: $heading-color
+    +xs-d
+        width: 300px
+    .social-style-one
+        a
+            +size(40px)
+            line-height: 40px
+
+.side-content-visible .hidden-bar
+    right: 0px
+    opacity: 1
+    visibility: visible
+
+.hidden-bar .inner-box
+    position: relative
+    padding: 100px 40px 50px
+    +xs-d
+        +gapLR(padding, 25px)
+    .cross-icon
+        position: absolute
+        right: 30px
+        top: 30px
+        cursor: pointer
+        color: #ffffff
+        font-size: 20px
+        transition: all 500ms ease
+    h4
+        position: relative
+        color: #ffffff
+        margin-bottom: 35px
+
+/*Appointment Form
+.hidden-bar .appointment-form
+    position: relative
+
+    .form-group
+        position: relative
+        margin-bottom: 20px
+
+    input
+        &[type="text"], &[type="email"]
+            position: relative
+            display: block
+            width: 100%
+            line-height: 23px
+            padding: 10px 25px
+            color: #ffffff
+            font-size: 16px
+            background: none
+            transition: all 300ms ease
+            border: 1px solid rgba(255, 255, 255, 0.1)
+
+    textarea
+        position: relative
+        display: block
+        width: 100%
+        line-height: 23px
+        padding: 10px 25px
+        color: #ffffff
+        font-size: 16px
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        background: none
+        transition: all 300ms ease
+        resize: none
+
+    input::placeholder
+        font-size: 14px
+        color: #bdbdbd
+
+    textarea
+        &::placeholder
+            font-size: 14px
+            color: #bdbdbd
+
+    .form-group button
+        width: 100%
+        font-size: 16px
+        padding: 10px 15px
+        margin-bottom: 20px
+        border-color: white
+
+.form-back-drop
+    position: fixed
+    right: 0px
+    top: 0px
+    width: 100%
+    height: 100%
+    opacity: 0
+    background: rgba(0, 0, 0, 0.7)
+    visibility: hidden
+    z-index: 9990
+    transition: all 0.5s ease
+
+.side-content-visible .form-back-drop
+    opacity: 1
+    visibility: visible
+    

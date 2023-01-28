@@ -1,0 +1,103 @@
+/*******************************************************/
+/******************* 07. Hero Section ******************/
+/*******************************************************/
+.hero-section
+    &:before
+        content: ''
+        left: 0
+        top: 0
+        position: absolute
+        filter: blur(200px)
+        +circle($primary-color, 700px)
+        transform: translate(-30%, -50%)
+.hero-content
+    z-index: 1
+    max-width: 700px
+    position: relative
+    +lg-d
+        margin-top: 155px
+        margin-bottom: 120px
+    .sub-title
+        font-size: 24px
+        margin-bottom: 20px
+    h1
+        margin-bottom: 30px
+        +md-d
+            font-size: 50px
+        +mo-d
+            font-size: 40px
+        +sm-d
+            font-size: 35px
+        +xs-d
+            font-size: 30px
+    
+    p
+        font-size: 18px
+        font-weight: 600
+        max-width: 550px
+    
+.hero-right-image
+    height: 100%
+    width: 50vw
+    right: 0
+    top: 0
+    z-index: -1
+    overflow: hidden
+    padding-top: 75px
+    position: absolute
+    +flexcenter(center)
+    background-size: cover
+    +tb-d
+        display: none
+    
+.hero-right-circles
+    +circle(white, 800px)
+    position: absolute
+    right: -350px
+    top: -350px
+    z-index: -2
+    opacity: 0.1
+    +tb-d
+        +size(400px)
+        right: -175px
+        top: -175px
+    +ms-d
+        +size(200px)
+        right: -85px
+        top: -85px
+    &:after
+        +circle(white, 100%)
+        position: absolute
+        content: ''
+        z-index: -3
+        right: 5%
+        top: 15%
+        opacity: 0.55
+        animation: customSlideInRight linear 1s both
+    &:before
+        +circle(white, 100%)
+        position: absolute
+        content: ''
+        z-index: -4
+        right: 15%
+        top: 30%
+        opacity: 0.65
+        animation: customSlideInRight linear 1.5s both
+    
+.hero-dot-one,
+.hero-dot-two,
+.hero-dot-three
+    position: absolute
+    +circle(#7379f2, 12px)
+    animation: zoomIn linear 1.5s infinite both
+.hero-dot-one
+    left: 5%
+    bottom: 35%
+.hero-dot-two
+    left: 45%
+    top: 20%
+    animation-delay: 1s
+.hero-dot-three
+    right: 50%
+    bottom: 15%
+    animation-delay: 2s

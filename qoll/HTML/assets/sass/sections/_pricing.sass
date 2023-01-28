@@ -1,0 +1,110 @@
+/*******************************************************/
+/***************** 14. Pricing Section *****************/
+/*******************************************************/
+.pricing-section
+    overflow: hidden
+    &:before
+        content: ''
+        left: 0
+        top: 0
+        position: absolute
+        filter: blur(200px)
+        +circle($primary-color, 700px)
+        transform: translate(-30%, 0)
+.pricing-item
+    padding: 40px
+    overflow: hidden
+    background: white
+    border-radius: 7px
+    position: relative
+    margin-bottom: 50px
+    +mo-d
+        +gapLR(padding, 25px)
+    .price-type
+        position: absolute
+        top: 0
+        color: white
+        right: -120px
+        line-height: 1
+        font-size: 15px
+        transition: 0.5s
+        font-weight: 700
+        background: #fe9600
+        text-transform: uppercase
+        padding: 5px 10px 5px 22px
+        font-family: $heading-font
+        &:before
+            position: absolute
+            content: ''
+            +size(20px)
+            left: -11px
+            top: 2px
+            background: white
+            transform: rotate(45deg)
+    h5
+        font-size: 24px
+        margin-bottom: 12px
+    p
+        max-width: 270px
+        margin-bottom: 22px
+    .price
+        display: flex
+        line-height: 1
+        font-size: 55px
+        font-weight: 600
+        margin-bottom: 30px
+        color: $primary-color
+        &:before
+            content: '$'
+            font-size: 24px
+            font-weight: 700
+            margin-top: 5px
+    .theme-btn
+        min-width: 90%
+        margin-bottom: 30px
+        color: $heading-color
+        +gapLR(padding, 15px)
+        background: transparent
+        border: 1px solid $border-color
+    &:hover
+        .price-type
+            right: 0
+        .theme-btn
+            color: white
+            background: $primary-color
+    
+.pricing-right-circles
+    position: absolute
+    right: -200px
+    +size(800px)
+    top: 30px
+    z-index: -2
+    border-radius: 50%
+    background: rgba(255, 255, 255, 0.02)
+    +tb-d
+        +size(400px)
+        right: -175px
+        top: -175px
+    +ms-d
+        +size(200px)
+        right: -85px
+        top: -85px
+    &:after
+        +circle(white, 100%)
+        position: absolute
+        content: ''
+        z-index: -3
+        left: 0
+        top: 13%
+        opacity: 0.02
+        animation: customSlideInLeft linear 1.5s both
+    &:before
+        +circle(white, 100%)
+        position: absolute
+        content: ''
+        z-index: -4
+        left: 0
+        top: 26%
+        opacity: 0.02
+        animation: customSlideInLeft linear 2s both
+    

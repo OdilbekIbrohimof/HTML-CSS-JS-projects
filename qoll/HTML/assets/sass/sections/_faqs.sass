@@ -1,0 +1,58 @@
+/*******************************************************/
+/******************* 11. FAQs Section ******************/
+/*******************************************************/
+.faq-accordion
+    max-width: 475px
+    .card
+        border: none
+        border-radius: 0
+        margin-bottom: 20px
+        background: transparent
+        .card-body
+            padding: 10px 0 0 30px
+            p
+                margin-bottom: 0
+        &:last-child
+            margin-bottom: 0
+    .card-header
+        padding: 0
+        border: none
+        display: flex
+        border-radius: 0
+        font-size: 20px
+        font-weight: 700
+        color: $secondary-color
+        background: transparent
+        text-decoration: underline
+        &.collapsed
+            text-decoration: none
+            color: $heading-color
+            .toggle-btn
+                transform: rotate(0deg)
+                &:before
+                    transform: translate(-50%, -50%) rotate(0)
+    .toggle-btn
+        height: 18px
+        width: 18px
+        flex: none
+        margin-top: 6px
+        transition: 0.5s
+        margin-right: 15px
+        position: relative
+        transform: rotate(180deg)
+        &:after,
+        &:before
+            position: absolute
+            content: ''
+            left: 50%
+            top: 50%
+            transition: 0.5s
+            background: $primary-color
+            transform: translate(-50%, -50%)
+        &:before
+            width: 1px
+            height: 100%
+            transform: translate(-50%, -50%) rotate(90deg)
+        &:after
+            height: 1px
+            width: 100%

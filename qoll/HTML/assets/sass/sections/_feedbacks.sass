@@ -1,0 +1,60 @@
+/*******************************************************/
+/***************** 13. Feedback Section ****************/
+/*******************************************************/
+.feedback-left-content
+    max-width: 450px
+.feedbacks-wrap
+    margin-left: 50px
+    +md-d
+        margin-left: 0
+.feedback-logo-wrap
+    max-width: 450px
+    +ms-d
+        max-width: 300px
+    .slick-track
+        display: flex
+        margin-left: 0
+        margin-bottom: 40px
+        border-bottom: 2px solid $border-color
+        .feedback-logo-item
+            transition: 0.5s
+            margin-right: 20px
+            margin-bottom: -2px
+            padding-bottom: 50px
+            border-bottom: 2px solid transparent
+            &.slick-current
+                border-color: $primary-color
+        img
+            +size(65px)
+            cursor: pointer
+            border-radius: 50%
+.feedback-content-item
+    .feedback-text
+        font-size: 24px
+        font-weight: 600
+        line-height: 1.6
+        color: $heading-color
+        font-family: $heading-font
+        +sm-d
+            font-size: 20px
+        &:after,
+        &:before
+            font-size: 16px
+            display: inline-block
+            color: $primary-color
+            font-family: "Font Awesome 5 Free"
+        &:before
+            content: "\f10d"
+            margin-right: 5px
+            transform: translateY(-15px)
+        &:after
+            content: "\f10e"
+            margin-left: 5px
+            transform: translateY(15px)
+    h5
+        font-size: 24px
+        margin: 25px 0 10px
+    h6
+        font-size: 16px
+        margin-bottom: 0
+        color: $primary-color

@@ -1,0 +1,54 @@
+/*******************************************************/
+/***************** 10. Projects Section ****************/
+/*******************************************************/
+.projects-section
+    background-size: 100% auto
+    background-position: 0 50px
+    background-repeat: no-repeat
+.project-wrap
+    display: flex
+    flex-wrap: wrap
+    +gapLR(margin, -15px)
+    justify-content: center
+    +xl-d
+        +gapLR(padding, 55px)
+.project-item
+    overflow: hidden
+    border-radius: 5px
+    margin: 0 15px 30px
+    width: calc(20% - 30px)
+    +overlay($primary-color, 0)
+    +md-d
+        width: calc(33% - 30px)
+    +mo-d
+        width: calc(50% - 30px)
+    +sm-d
+        width: calc(100% - 30px)
+    &:before
+        z-index: 1
+        transition: 0.5s
+    img
+        width: 100%
+        border-radius: 5px
+    a
+        position: absolute
+        left: 50%
+        top: 50%
+        z-index: 2
+        opacity: 0
+        color: white
+        font-size: 70px
+        transition: 0.5s
+        transform: translate(-50%, -50%)
+    &:hover
+        &:before
+            opacity: 0.75
+        a
+            opacity: 1
+        
+.project-help-btn
+    h5
+        font-weight: 500
+        a
+            color: $secondary-color
+            text-decoration: underline

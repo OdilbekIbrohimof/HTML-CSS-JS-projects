@@ -1,0 +1,98 @@
+/*******************************************************/
+/******************* 17. Main Footer *******************/
+/*******************************************************/
+.main-footer
+    overflow: hidden
+    &:after
+        content: ''
+        bottom: 0
+        right: 0
+        z-index: -1
+        position: absolute
+        filter: blur(150px)
+        transform: translate(40%, 0)
+        +circle($primary-color, 400px)
+.location-social
+    flex-wrap: wrap
+    +flexcenter(space-between)
+    border-bottom: 1px solid #323d56
+    +tb-d
+        flex-direction: column
+        justify-content: center
+    .location
+        display: flex
+        max-width: 280px
+        margin-bottom: 10px
+        i
+            font-size: 24px
+            margin: 5px 15px 0 0
+            color: $secondary-color
+        h5
+            font-size: 20px
+    
+.call-to-action
+    +container(790px)
+    
+.copyright-area
+    flex-wrap: wrap
+    text-align: center
+    +flexcenter(space-between)
+    border-top: 1px solid #323d56
+    +tb-d
+        flex-direction: column
+        justify-content: center
+    .footer-menu
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 10px
+        justify-content: center
+        li
+            margin: 0 18px 5px 18px
+            text-transform: capitalize
+            +sm-d
+                +gapLR(margin, 8px)
+            &:first-child
+                margin-left: 0
+            &:last-child
+                margin-right: 0
+            a
+                color: white
+                opacity: 0.5
+                font-weight: 700
+                &:hover
+                    opacity: 1
+                
+.footer-left-circles
+    position: absolute
+    left: -400px
+    +size(800px)
+    top: 0
+    z-index: -2
+    border-radius: 50%
+    background: rgba(255, 255, 255, 0.02)
+    +tb-d
+        +size(400px)
+        left: -200px
+    +ms-d
+        +size(200px)
+        left: -100px
+    &:after
+        +circle(white, 100%)
+        position: absolute
+        content: ''
+        z-index: -3
+        left: 0
+        top: 15%
+        opacity: 0.02
+        animation: customSlideInLeft linear 1.5s both
+    &:before
+        +circle(white, 100%)
+        position: absolute
+        content: ''
+        z-index: -4
+        left: 0
+        top: 30%
+        opacity: 0.02
+        animation: customSlideInLeft linear 2s both
+    
+  

@@ -1,0 +1,76 @@
+/*******************************************************/
+/****************** 09. About Section ******************/
+/*******************************************************/
+.about-left
+    margin-right: -30px
+    +md-d
+        margin-right: 0
+.about-content
+    max-width: 600px
+    margin-left: 100px
+    +md-d
+        margin-left: 0
+.about-bg-shape
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    max-width: 40%
+    
+/* What we want */
+.what-we-want-content
+    max-width: 435px
+.what-we-want-tab
+    .nav
+        li
+            margin: 0 15px 15px 0
+            a
+                font-size: 18px
+                font-weight: 700
+                padding: 7px 30px
+                border-radius: 5px
+                color: $heading-color
+                box-shadow: 20px 0 60px rgba(14, 27, 56, 0.15)
+                &:hover,
+                &.active
+                    color: white
+                    background: $primary-color
+    .list-style-one
+        display: flex
+        margin-top: 30px
+        flex-wrap: wrap
+        justify-content: space-between
+        li
+            transition: 0.5s
+            padding: 15px 20px
+            border-radius: 7px
+            width: calc(50% - 15px)
+            color: $heading-color-two
+            border: 1px solid $border-color
+            +sm-d
+                width: 100%
+            &:before
+                transition: 0.5s
+                border: 1px solid
+                color: $secondary-color
+                background: transparent
+            &:hover
+                color: white
+                background: $secondary-color
+                &:before
+                    color: white
+            
+/* Why Choose Us */
+.why-choose-us-content
+    max-width: 600px
+    margin-left: 100px
+    +md-d
+        margin-left: 0
+    .list-style-one
+        li
+            font-size: 16px
+            line-height: 32px
+            &:before
+                margin-top: 5px
+            p
+                font-weight: 400

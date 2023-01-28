@@ -1,0 +1,243 @@
+/*******************************************************/
+/*****************  02. Common Classes *****************/
+/*******************************************************/
+.page-wrapper
+    position: relative
+    z-index: 9
+    width: 100%
+    margin: 0 auto
+    overflow: hidden
+    min-width: 300px
+    background: #FFFFFF
+    
+.container
+    max-width: $container
+    padding-left: $gutter/2
+    padding-right: $gutter/2
+
+.large-gap
+    +colgap(50px)
+    
+.small-gap
+    +colgap(10px)
+    
+.col-small
+    +xs-d
+        flex: 0 0 100%
+        max-width: 100%
+    
+/** Section Title style **/
+.section-title
+    z-index: 1
+    position: relative
+    h2
+        span
+            color: $secondary-color
+        +tm-d
+            font-size: 40px
+        +mo-d
+            font-size: 35px
+        +ms-d
+            font-size: 30px
+        +xs-d
+            font-size: 25px
+        br
+            +sm-d
+                display: none
+.sub-title
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 15px
+    display: inline-block
+    color: $secondary-color
+    font-family: $heading-font
+    text-transform: capitalize
+    &:before
+        content: "\f141"
+        margin-right: 20px
+        font-family: "Font Awesome 5 Free"
+    &:after
+        display: none
+        content: "\f141"
+        margin-left: 20px
+        font-family: "Font Awesome 5 Free"
+.text-center
+    .sub-title
+        &:after
+            display: inline-block
+   
+/** Button style **/
+.theme-btn,
+a.theme-btn
+    z-index: 1
+    color: white
+    cursor: pointer
+    overflow: hidden
+    font-size: 18px
+    transition: 0.5s
+    font-weight: 700
+    position: relative
+    text-align: center
+    padding: 11px 35px
+    border-radius: 5px
+    align-items: center
+    display: inline-flex
+    justify-content: center
+    text-transform: capitalize
+    background: $primary-color
+    i
+        font-size: 13px
+        transition: 0.5s
+        margin-left: 10px
+    +sm-d
+        font-size: 16px
+        padding: 12px 25px
+    &:hover
+        background: $secondary-color
+    &.style-two
+        background: $secondary-color
+        &:hover
+            background: $primary-color
+    &.style-three
+        border: 1px solid
+        color: $primary-color
+        background: transparent
+        &:hover
+            color: $secondary-color
+        
+
+/* Read More */
+.read-more
+    font-weight: 700
+    align-items: center
+    display: inline-flex
+    color: $primary-color
+    text-transform: capitalize
+    i
+        margin-left: 7px
+        transition: 0.5s
+    &:hover
+        i
+            margin-left: 10px
+      
+/* List style One */
+.list-style-one
+    li
+        display: flex
+        font-size: 18px
+        font-weight: 600
+        line-height: 1.4
+        margin-bottom: 15px
+        color: $heading-color
+        font-family: $heading-font
+        &:before
+            flex: none
+            color: white
+            font-size: 12px
+            content: "\f00c"
+            margin-right: 20px
+            +circle($primary-color, 25px)
+            font-family: 'Font Awesome 5 Free'
+      
+/* List style Two */
+.list-style-two
+    li
+        display: flex
+        font-weight: 600
+        margin-bottom: 8px
+        color: $heading-color
+        &:last-child
+            margin-bottom: 0
+        &:before
+            flex: none
+            font-size: 14px
+            content: "\f00c"
+            margin-right: 10px
+            color: $secondary-color
+            font-family: 'Font Awesome 5 Free'
+     
+/** Social Link One **/
+.social-style-one
+    flex-wrap: wrap
+    display: inline-flex
+    justify-content: center
+    a
+        +size(50px)
+        color: white
+        line-height: 50px
+        border-radius: 5px
+        text-align: center
+        background: #3e4960
+        margin: 0 15px 10px 15px
+        +sm-d
+            +gapLR(margin, 5px)
+        &:first-child
+            margin-left: 0
+        &:last-child
+            margin-right: 0
+        &:hover
+            background: $primary-color
+        
+.nice-select
+    .list
+        width: 100%
+    &:after
+        +size(10px)
+        right: 30px
+        border-color: $primary-color
+
+/*** Preloader style ** */
+.preloader
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 9999999
+    background-color: #FFFFFF
+    background-repeat: no-repeat
+    background-position: center center
+    background-image: url(../images/preloader.gif)
+
+    
+/*** Scroll Top style ***/
+.scroll-top
+    position: fixed
+    bottom: 30px
+    right: 30px
+    z-index: 99
+    +size(40px)
+    color: white
+    display: none
+    cursor: pointer
+    border-radius: 5px
+    animation: pulse 2s infinite
+    background: lighten($heading-color, 8%)
+        
+/* Position */
+.rel
+    position: relative
+    
+@for $i from 0 through 5
+    .z-#{0 + $i}
+        z-index: 0 + $i
+    
+.overlay
+    +overlay($heading-color, 0.5)
+    
+/* Backgruond Size */
+.bgs-cover
+    background-size: cover
+    background-position: center
+
+/* Color + Background */ 
+.bg-light
+    background-color: $light-color
+.bg-dark-blue
+    background-color: #0e1b38
+   
+/* Border Radius */
+@for $i from 1 through 6
+    .br-#{5 * $i}
+        border-radius: 5px * $i
+    

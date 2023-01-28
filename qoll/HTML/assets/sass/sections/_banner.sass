@@ -1,0 +1,42 @@
+/*******************************************************/
+/****************** 08. Banner Section *****************/
+/*******************************************************/
+.page-banner-area
+    +tb-d
+        padding-top: 170px
+    &:before
+        content: ''
+        left: 0
+        top: 0
+        position: absolute
+        filter: blur(200px)
+        +circle($primary-color, 500px)
+        transform: translate(-30%, -50%)
+    
+.page-title
+    font-size: 60px
+    +tb-d
+        font-size: 50px
+    +ms-d
+        font-size: 40px
+
+.breadcrumb-nav
+    +flexcenter(end)
+    +mo-d
+        margin-top: 10px
+        justify-content: start
+    li
+        display: flex
+        font-size: 22px
+        font-weight: 700
+        align-items: center
+        +sm-d
+            font-size: 18px
+        a
+            color: $secondary-color
+        &:not(:last-child)
+            &:after
+                font-size: 16px
+                content: "\f061"
+                +gapLR(margin, 16px)
+                font-family: "Font Awesome 5 Free"
