@@ -1,0 +1,28 @@
+
+
+// testimonials
+
+.testimonials {
+    position: relative;
+    .client-box {
+      cursor: pointer;
+      padding: 40px 25px;
+      border-radius: 20px;
+      transition: all 0.5s ease;
+      background-color: transparent;
+      &:hover {
+        border-color: transparent;
+        background-color: $white;
+      }
+      .client-content {
+        z-index: 0;
+        .quote-img {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          z-index: -1;
+          opacity: 0.3;
+        }
+      }
+    }
+  }

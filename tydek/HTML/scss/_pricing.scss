@@ -1,0 +1,62 @@
+// 
+//  peicing
+// 
+
+.pricing {
+  position: relative;
+  .pricing-box {
+    padding: 46px 36px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 7px 29px 0px;
+    transition: all 0.5s ease-in-out;
+    .ribbon {
+      background: $primary;
+      color: $white;
+      font-size: 0.9em;
+      padding: 45px 54px 15px;
+      transform: rotate(45deg);
+      position: absolute;
+      top: -23px;
+      right: -60px;
+      border-radius: 50%;
+    }
+    .pricing-list {
+      .pricing-item {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+    }
+    sub {
+      bottom: -0.15rem;
+      font-size: 14px;
+    }
+    .btn-pricing {
+      background-color: $black;
+      color: $white;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .pricing-box,.active {
+    border: 2px solid $primary;
+  }
+}
+
+@media (min-width: 992px) {
+  .pricing-box.pricing-active {
+    transform: scale(1.05);
+  }
+  sup {
+    top: -1.5rem;
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-pricing {
+    height: auto;
+    padding: 80px 0;
+  }
+}
+  

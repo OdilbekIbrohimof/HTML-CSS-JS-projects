@@ -1,0 +1,93 @@
+// 
+// team
+// 
+
+.team {
+    background-color: rgba($muted, 0.04);
+    .team-member {
+        overflow: hidden;
+        .team-img {
+            position: relative;
+            img {
+                border-radius: 14px;
+            }
+        }
+        .team-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+            border: 10px solid rgba($primary, 0.6);
+            background-color: rgba($white, 0.80);
+            opacity: 0;
+            transition: all 0.3s;
+            border-radius: 14px;
+            .desk {
+                position: absolute;
+                top: 0%;
+                width: 100%;
+                opacity: 0;
+                transform: translateY(-55%);
+                transition: all 0.3s 0.2s;
+                padding: 0 20px;
+            }
+            .s-link {
+                bottom: 10%;
+                position: absolute;
+                width: 100%;
+                opacity: 0;
+                text-align: center;
+                transform: translateY(45%);
+                transition: all 0.3s 0.2s;
+                font-size: 35px;
+                a {
+                    margin: 0 10px;
+                    color: $dark;
+                    font-size: 16px;
+                }
+            }
+        }
+        &:hover {
+            .team-hover {
+                .desk {
+                    top: 35%;
+                }
+            }
+        }
+    }
+    .team-title {
+        position: static;
+        padding: 20px 0;
+        display: inline-block;
+        letter-spacing: 2px;
+        width: 100%;
+        h5 {
+            margin-bottom: 0px;
+            display: block;
+            text-transform: uppercase;
+        }
+        span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.team-member, 
+.team-member 
+.team-img {
+    position: relative;
+}
+
+.team-member:hover 
+.team-hover, 
+.team-member:hover 
+.team-hover .desk, 
+.team-member:hover 
+.team-hover 
+.s-link {
+    opacity: 1;
+}

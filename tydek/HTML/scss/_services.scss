@@ -1,0 +1,29 @@
+//  services
+
+.services {
+  background-color: rgba($muted, 0.04);
+  .card {
+    border-radius: 10px;
+    border: 1px solid rgba($muted, 0.2);
+    transition: all 0.5s ease-in-out;
+    .card-body {
+      .box {
+        text-align: center;
+        .avatar-sm {
+          margin: 0 auto;
+          .avatar-title {
+            align-items: center;
+            border-radius: 8px;
+            i {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px;
+    }
+  }
+}

@@ -1,0 +1,218 @@
+//
+//  footer
+//
+
+// .footer {
+//     color: rgba($black, 1);
+//     font-size: 15px;
+//     background-color: rgba($primary, 0.03);
+// }
+
+// .footer-alt {
+//     background-color: rgba($primary, 0.03);
+// }
+
+
+
+
+// 
+//  footer
+// 
+
+.bg-footer {
+    background-color: rgba($primary, 0.04);
+    .social-icon {
+        .list-inline-item:not(:last-child) {
+            margin-right: 10px;
+        }
+        li {
+            display: inline-flex;
+            margin-top: 20px;
+            a {
+                color: rgba($black, 1);
+                border: 1px solid rgba($black, 1);
+                display: inline-block;
+                height: 32px;
+                text-align: center;
+                font-size: 17px;
+                width: 32px;
+                line-height: 30px;
+                transition: all 0.4s ease;
+                border-radius: 3px;
+                &:hover {
+                    color: rgba($primary, 1);
+                    border: 1px solid rgba($primary, 1);
+                }
+            }
+        }
+    }
+    
+    .icon-text {
+        display: inline-flex;
+        .icon {
+            position: relative;
+            background-color: rgba($white, 1);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 10px 10px rgba($black, 0.1);
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            .tooltip {
+                position: absolute;
+                top: 0;
+                font-size: 14px;
+                background-color: rgba($white, 1);
+                color: rgba($black, 1);
+                padding: 5px 8px;
+                border-radius: 5px;
+                box-shadow: 0 10px 10px rgba($black, 0.1);
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 8px;
+                    width: 8px;
+                    bottom: -3px;
+                    left: 50%;
+                    transform: translate(-50%) rotate(45deg);
+                    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                }
+            }
+            i {
+                font-size: 18px;
+            }
+        }
+    
+        @mixin facebook {
+            background-color: #3b5999;
+            color: rgba($white, 1);
+        }
+        .facebook {
+            &:hover {
+                @include facebook();
+                .tooltip {
+                    @include facebook();
+                    &::before {
+                        @include facebook();
+                    }
+                }
+            }
+        }
+        @mixin twitter {
+            background-color: #46c1f6;
+            color: rgba($white, 1);
+        }
+        .twitter {
+            &:hover {
+                @include twitter();
+                .tooltip {
+                    @include twitter();
+                    &::before {
+                        @include twitter();
+                    }
+                }
+            }
+        }
+        @mixin instagram {
+            background-color: #e1306c;
+            color: rgba($white, 1);
+        }
+        .instagram {
+            &:hover {
+                @include instagram();
+                .tooltip {
+                    @include instagram();
+                    &::before {
+                        @include instagram();
+                    }
+                }
+            }
+        }
+        @mixin github {
+            background-color: #333333;
+            color: rgba($white, 1);
+        }
+        .github {
+            &:hover {
+                @include github();
+                .tooltip {
+                    @include github();
+                    &::before {
+                        @include github();
+                    }
+                }
+            }
+        }
+        @mixin youtube {
+            background-color: #de463b;
+            color: rgba($white, 1);
+        }
+        .youtube {
+            &:hover {
+                @include youtube();
+                .tooltip {
+                    @include youtube();
+                    &::before {
+                        @include youtube();
+                    }
+                }
+            }
+        }
+        &:hover {
+            .tooltip {
+                top: -45px;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+        }
+    }
+    .footer-link {
+        a {
+            color: $dark;
+            line-height: 38px;
+            transition: all 0.5s;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+    .footer-subcribe {
+        input {
+            padding: 15px 20px;
+            width: 100%;
+            font-size: 14px;
+            border: none;
+            outline: none !important;
+            padding-right: 75px;
+            padding-left: 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        button {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            outline: none !important;
+            border-radius: 0px 5px 5px 0px;
+            font-size: 14px;
+            padding: 14px 20px;
+        }
+        form {
+            position: relative;
+            max-width: 400px;
+        }
+    }
+}
+
+.footer-alt {
+    background-color: rgba($primary, 1);
+    border-top: 1px solid rgba($black, 0.1);
+}

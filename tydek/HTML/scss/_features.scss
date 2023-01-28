@@ -1,0 +1,30 @@
+// 
+//  featuers
+//
+
+
+.features {
+    background-color: rgba($muted, 0.04);
+    .features-box {
+        border-radius: 20px;
+        background-color: rgba($primary, 0.06);
+        .features-body {
+            .features-icon {
+                font-size: 40px;
+                color: rgba($primary, 0.8);
+                cursor: pointer;
+                transition: all 0.1s ease-in-out;
+                &:hover {
+                    font-size: 44px;
+                }
+            }
+            h6 {
+                font-size: 16px;
+            }
+            .features-img {
+                border-radius: 20px;
+            }
+        }
+    }
+}
+

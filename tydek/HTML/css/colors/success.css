@@ -1,0 +1,128 @@
+/* success.css */
+
+
+/* color */
+.text-primary,
+.btn-outline-primary,
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:hover.dropdown-toggle::after,
+.navbar .navbar-nav .nav-item .nav-link.active.dropdown-toggle::after,
+.navbar .navbar-nav .nav-item .nav-link:focus.dropdown-toggle::after,
+.navbar .navbar-nav .nav-item .nav-link:active.dropdown-toggle::after,
+.nav-sticky .navbar-nav .nav-item .nav-link:hover,
+.nav-sticky .navbar-nav .nav-item .nav-link:active,
+.nav-sticky .navbar-nav .nav-item .nav-link:focus,
+.nav-sticky .navbar-nav .nav-item .nav-link.active,
+.nav-sticky .navbar-nav .nav-item .nav-link.active .dropdown-toggle:after,
+.primary-link:hover,
+.feature-icon,
+.social-list .social-icon:hover,
+.testimonial-box .testi-img .quote-icon,
+.nav-link.active,
+.nav-item .nav-link:hover,
+.features-icon,
+.about-heading::before,
+.home-6 .home-title,
+.faq .icon {
+    color: #06ba63 !important;
+}
+
+/* background-color */
+.bg-primary,
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.works-description-left::after,
+.works-description-right::after,
+.form-check-input:checked,
+.works-description-left::after,
+.works-description-right::after,
+.swiper-button-next, .swiper-button-prev,
+.ribbon,
+.sidebar .sd-title::after,
+.pagination .page-item .page-link:hover,
+.pagination .page-item .page-link.active,
+.pagination .page-item .page-link:focus,
+#back-to-top:hover,
+#back-to-top,
+.footer-alt,
+.avatar-title,
+.about-heading::after,
+.home-6 .heading::before,
+.sidebar .tagcloud a:hover {
+    background-color: #06ba63 !important;
+}
+
+/* btn box-shadow */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary .open>.dropdown-toggle.btn-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary.focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary .open>.dropdown-toggle.btn-primary {
+    box-shadow: 0px 8px 20px -6px rgba(6, 186, 99, 0.6);
+}
+
+/* border-color */
+.form-control:focus,
+.form-check-input:checked,
+.border-primary,
+.btn-primary,
+.btn-outline-primary,
+.nav-link.active,
+.nav-item .nav-link:hover,
+.pricing .pricing-box, .pricing .active,
+.team .team-member .team-hover,
+.social-list .social-icon:hover {
+    border-color: #06ba63 !important;
+}
+
+/* slider */
+.swiper-pagination-bullet,
+.home-10::before,
+.features-box {
+    background-color: rgba(221, 255, 239, 0.9) !important;
+}
+
+/* home-bg extra light */
+.bg-footer,
+.home-10::after {
+    background-color: rgba(241, 255, 248, 0.9) !important;
+}
+
+/* rgba background */
+.timeline-page::after,
+.price-box .price-features i,
+.faq .icon {
+    background-color: rgba(6, 186, 99, 0.15);
+}
+
+/* process box-shadow */
+.works-description-left:hover::after,
+.works-description-right:hover::after {
+    box-shadow: 0px 0px 5px 2px #06ba63 !important;
+}
+
+/* featrue box */
+.feature-icon,
+.bg-home4 {
+    background-color: rgba(6, 168, 99, 0.2);
+}

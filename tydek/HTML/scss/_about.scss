@@ -1,0 +1,184 @@
+//  about 
+
+.about {
+    .text-center {
+        margin-bottom: 100px;
+    }
+    .img-bg {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -60px;
+            right: 40%;
+            left: -80px;
+            bottom: -60px;
+            border-radius: 20px;
+            background-color: rgba($primary, 0.2);
+        }
+    }
+    .about-img {
+        position: relative;
+        border-radius: 20px;
+    }
+    .about-title {
+        font-size: 26px;
+    }
+    .about-box {
+        border: none;
+        .card-body {
+            border-radius: 10px;
+            background-color: rgba($primary, 0.06);
+            .avatar-title {
+                border-radius: 10px;
+                align-items: center;
+                background-color: #ffe6df;
+                i {
+                    font-size: 38px;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        .text-center {
+            margin-bottom: 30px;
+        }
+        .img-bg {
+            margin-bottom: 40px;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+// 
+//  about
+// 
+
+.about {
+    .tab-pane {
+        .about-img {
+            img {
+                border-radius: 20px;
+            }
+        }
+    }
+    .nav {
+        &.nav-tabs {
+            border-bottom: none;
+            .nav-item {
+                padding-right: 10px;
+                .nav-link {
+                    color: $black;
+                    padding: 18px 0;
+                    border-radius: 8px;
+                    &.active,
+                    :focus {
+                        border: 2px solid rgba($primary, 0.8);
+                        color: $primary;
+                        box-shadow: rgba($black, 0.27) 0px 3px 8px;
+                        transition: all 0.9s ease 0s;
+                        background: transparent;
+                    }
+                    &:hover {
+                        border: 2px solid rgba($primary, 0.8);
+                        color: $primary
+                    }
+                }
+            }
+        }
+    }
+    .tab-content {
+        padding-top: 1rem;
+        .accordion {
+            .accordion-item {
+                border-radius: 8px;
+                margin: 19px 0 0 0;
+                border: 1px solid #e0e0e0;
+                .accordion-button {
+                    margin: 0px 8px 0px 0;
+                    border-radius: 8px;
+                    padding: 36px 24px 10px 24px;
+                    &::after {
+                        background-image: none;
+                        transition: all 0.5s ease;
+                    }
+                    h6 {
+                        margin-bottom: 0;
+                        position: relative;
+                        padding-left: 40px;
+                        font-size: 18px;
+                        span {
+                            position: absolute;
+                            font-size: 44px;
+                            top: -27px;
+                            left: 0;
+                        }
+                    }
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+                .accordion-body {
+                    padding: 12px 58px 8px 66px;
+                }
+            }
+            .accordion-button:not(.collapsed) {
+                color: $primary;
+                background-color: transparent;
+                box-shadow: none;
+                h6 {
+                    font-weight: 600;
+                    span {
+                        opacity: 1;
+                        color: $primary;
+                    }
+                }
+            }
+            .accordion-button:after {
+                content: "\F0374";
+                font-family: "Material Design Icons";
+                color: rgba($primary, 1);
+                margin-top: -20px;
+            }
+            .accordion-button.collapsed:after {
+                content: "\F0415";
+                font-family: "Material Design Icons";
+                color: rgba($black, 1);
+                margin-top: -20px;
+            }
+        }
+        .about-heading {
+            position: relative;
+            margin-bottom: 14px;
+            padding-left: 22px;
+            &::before {
+                content: "\F012F";
+                position: absolute;
+                width: 10px;
+                font-family: "Material Design Icons";
+                font-size: 14px;
+                color: rgba($primary, 1);
+                left: 0;
+                top: 6px;
+                transition: all 0.7s ease;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 19%;
+                height: 2px;
+                background: rgba($primary, 1);
+                bottom: -2px;
+                left: 10px;
+            }
+        }
+    }
+}
+
+
